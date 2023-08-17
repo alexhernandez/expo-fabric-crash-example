@@ -25,6 +25,9 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
+// ADD REANIMATED'S `ANIMATED` DEP
+import Animated from 'react-native-reanimated';
+
 type SectionProps = PropsWithChildren<{
   title: string;
 }>;
@@ -72,7 +75,7 @@ function App(): JSX.Element {
         contentInsetAdjustmentBehavior="automatic"
         style={backgroundStyle}>
         <Header />
-        <View
+        <Animated.View
           style={{
             backgroundColor: isDarkMode ? Colors.black : Colors.white,
           }}>
@@ -90,7 +93,7 @@ function App(): JSX.Element {
             Read the docs to discover what to do next:
           </Section>
           <LearnMoreLinks />
-        </View>
+        </Animated.View>
       </ScrollView>
     </SafeAreaView>
   );
